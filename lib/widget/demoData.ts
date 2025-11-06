@@ -7,7 +7,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
     id: "exp_kayak",
     title: "Sunset Kayak Tour",
     imageUrl:
-      "https://images.unsplash.com/photo-1520975682031-a581c2df8d8c?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1465311440653-ba9b1d9b0f5b?auto=format&fit=crop&w=1600&q=80",
     description:
       "Paddle along the coastline with a guide and enjoy a breathtaking sunset over the bay.",
     priceCents: 6500,
