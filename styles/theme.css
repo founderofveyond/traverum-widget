@@ -1,0 +1,13 @@
+/* Widget theming helpers */
+.trv-container {
+  background: var(--trv-bg);
+  color: var(--trv-fg);
+}
+
+.trv-card {
+  @apply bg-white/70 backdrop-blur rounded-xl shadow border border-slate-200;
+}
+
+[data-theme="dark"] .trv-card {
+  @apply bg-slate-800/60 border-slate-700;
+}

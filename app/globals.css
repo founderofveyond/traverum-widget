@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --trv-primary: #0ea5e9;
+  --trv-bg: #ffffff;
+  --trv-fg: #0f172a;
+}
+
+[data-theme="dark"] {
+  --trv-primary: #22d3ee;
+  --trv-bg: #0b1220;
+  --trv-fg: #e2e8f0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--trv-bg);
+  color: var(--trv-fg);
+}
