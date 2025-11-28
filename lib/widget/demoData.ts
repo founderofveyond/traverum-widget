@@ -37,11 +37,11 @@ export const DEMO_EXPERIENCES: Experience[] = [
   },
   {
     id: "exp_food",
-    title: "City Food Tour",
+    title: "Mottarone day",
     imageUrl:
-      "https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?q=80&w=1600&auto=format&fit=crop",
+      "/images/mottarone-day.jpg",
     description:
-      "Explore hidden gems and street food favorites with a local expert guide.",
+      "Imagine standing on a mountain ridge where seven lakes shimmer at your feet.",
     priceCents: 5500,
     currency: "EUR",
     durationMin: 150,
