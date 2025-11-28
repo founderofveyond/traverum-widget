@@ -29,11 +29,11 @@ export default function ExperienceCard({
           }}
         />
       </div>
-      <div className="space-y-2 p-4">
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="line-clamp-3 text-sm text-slate-600">{description}</p>
+      <div className="space-y-2 p-4 font-zacchera-body">
+        <h3 className="text-lg font-semibold font-zacchera-body">{title}</h3>
+        <p className="line-clamp-3 text-sm text-slate-600 font-zacchera-body">{description}</p>
         <div className="flex items-center justify-between pt-2">
-          <span className="text-base font-medium">{priceEuros}</span>
+          <span className="text-base font-medium font-zacchera-body">{priceEuros}</span>
           <Button onClick={onView}>View</Button>
         </div>
       </div>

@@ -31,17 +31,17 @@ export default function Details() {
       <div className="trv-card overflow-hidden">
         <img src={experience.imageUrl} alt={experience.title} className="h-72 w-full object-cover" />
       </div>
-      <div className="space-y-4">
-        <h2 className="text-2xl font-semibold">{experience.title}</h2>
-        <p className="text-slate-700">{experience.description}</p>
-        <div className="flex gap-4 text-sm text-slate-600">
+      <div className="space-y-4 font-zacchera-body">
+        <h2 className="text-2xl font-semibold font-zacchera-body">{experience.title}</h2>
+        <p className="text-slate-700 font-zacchera-body">{experience.description}</p>
+        <div className="flex gap-4 text-sm text-slate-600 font-zacchera-body">
           <div>Duration: {Math.round(experience.durationMin / 60)}h</div>
           <div>Max: {experience.maxParticipants} people</div>
         </div>
         <div className="space-y-2">
-          <label className="text-sm text-slate-600">Select date/time</label>
+          <label className="text-sm text-slate-600 font-zacchera-body">Select date/time</label>
           <select
-            className="w-full rounded-md border border-slate-300 px-3 py-2"
+            className="w-full rounded-zacchera-small border border-slate-300 bg-zacchera-form-bg px-3 py-2 font-zacchera-body outline-none focus:ring-2 focus:ring-zacchera-primary"
             value={slotId}
             onChange={(e) => setSlotId(e.target.value)}
           >
@@ -53,14 +53,14 @@ export default function Details() {
           </select>
         </div>
         <div className="space-y-2">
-          <label className="text-sm text-slate-600">Participants</label>
+          <label className="text-sm text-slate-600 font-zacchera-body">Participants</label>
           <input
             type="number"
             min={1}
             max={experience.maxParticipants}
             value={qty}
             onChange={(e) => setQty(Number(e.target.value))}
-            className="w-32 rounded-md border border-slate-300 px-3 py-2"
+            className="w-32 rounded-zacchera-small border border-slate-300 bg-zacchera-form-bg px-3 py-2 font-zacchera-body outline-none focus:ring-2 focus:ring-zacchera-primary"
           />
         </div>
         <div className="flex items-center justify-between pt-2">

@@ -15,7 +15,7 @@ export default function StepIndicator() {
   const { state } = useWidget();
   const idx = steps.findIndex(s => s.key === state.step);
   return (
-    <div className="text-xs text-slate-500">
+    <div className="text-xs text-slate-500 font-zacchera-body">
       Step {idx + 1} / {steps.length}
     </div>
   );

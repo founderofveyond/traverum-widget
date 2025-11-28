@@ -1,15 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Abril+Fatface&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --trv-primary: #0ea5e9;
+  --trv-primary: #3ed2a7;
+  --trv-secondary: #ffb09f;
+  --trv-form-bg: #F6F1EA;
+  --trv-hover-primary: #380100;
+  --trv-hover-secondary: #FB4627;
   --trv-bg: #ffffff;
   --trv-fg: #0f172a;
 }
 
 [data-theme="dark"] {
-  --trv-primary: #22d3ee;
+  --trv-primary: #3ed2a7;
+  --trv-secondary: #ffb09f;
+  --trv-form-bg: #F6F1EA;
+  --trv-hover-primary: #380100;
+  --trv-hover-secondary: #FB4627;
   --trv-bg: #0b1220;
   --trv-fg: #e2e8f0;
 }
@@ -21,4 +31,5 @@ html, body {
 body {
   background: var(--trv-bg);
   color: var(--trv-fg);
+  font-family: 'Montserrat', sans-serif;
 }

@@ -5,7 +5,7 @@
 }
 
 .trv-card {
-  @apply bg-white/70 backdrop-blur rounded-xl shadow border border-slate-200;
+  @apply bg-white/70 backdrop-blur rounded-zacchera-container shadow border border-slate-200;
 }
 
 [data-theme="dark"] .trv-card {
