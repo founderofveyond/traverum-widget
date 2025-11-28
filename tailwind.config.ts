@@ -50,7 +50,7 @@ const config: Config = {
       },
       fontFamily: {
         'zacchera-body': ['Overpass', 'sans-serif'],
-        'zacchera-heading': ['Overpass', 'sans-serif']
+        'zacchera-heading': ['New York', 'serif']
       },
       fontSize: {
         'zacchera-base': ['17.6px', { lineHeight: '26.4px' }]
