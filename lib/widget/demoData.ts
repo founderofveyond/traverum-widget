@@ -9,7 +9,7 @@ export const DEMO_EXPERIENCES: Experience[] = [
     imageUrl:
       "/images/sunrise-canoe-tour.webp",
     description:
-      "Glide across Lake Maggiore from Angera towards Arona on a relaxed three‑and‑a‑half‑hour adventure.",
+      "Glide across Lake Maggiore from Angera towards Arona",
     priceCents: 6500,
     currency: "EUR",
     durationMin: 120,

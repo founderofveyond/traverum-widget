@@ -45,7 +45,7 @@ function WidgetChrome() {
       <header className="mb-6">
         <h1 className="text-4xl font-zacchera-bold font-zacchera-heading text-zacchera-text-tan mb-2">Local Experiences</h1>
         <p className="text-base text-zacchera-text-gray font-zacchera-body">
-          These local experiences have been chosen by Zacchera hotels. Book directly and experience Lake Maggiore the fullest.
+          Experience Lake Maggiore the fullest with our chosen experiences from the area.
         </p>
       </header>
       <Router />
