@@ -21,11 +21,11 @@ export default function PaymentMock() {
     <div className="mx-auto max-w-md space-y-4 font-zacchera-body">
       <div className="trv-card p-4">
         <div className="space-y-2">
-          <div className="text-sm text-slate-600 font-zacchera-body">Mock card form</div>
-          <input className="w-full rounded-zacchera-small border border-slate-300 bg-zacchera-form-bg px-3 py-2 font-zacchera-body outline-none focus:ring-2 focus:ring-zacchera-primary" placeholder="Card number" />
+          <div className="text-sm text-zacchera-text-gray font-zacchera-body">Mock card form</div>
+          <input className="w-full rounded-zacchera-small border border-zacchera-border-light bg-zacchera-form-bg px-3 py-2 font-zacchera-body outline-none focus:ring-2 focus:ring-zacchera-primary" placeholder="Card number" />
           <div className="flex gap-2">
-            <input className="w-full rounded-zacchera-small border border-slate-300 bg-zacchera-form-bg px-3 py-2 font-zacchera-body outline-none focus:ring-2 focus:ring-zacchera-primary" placeholder="MM/YY" />
-            <input className="w-full rounded-zacchera-small border border-slate-300 bg-zacchera-form-bg px-3 py-2 font-zacchera-body outline-none focus:ring-2 focus:ring-zacchera-primary" placeholder="CVC" />
+            <input className="w-full rounded-zacchera-small border border-zacchera-border-light bg-zacchera-form-bg px-3 py-2 font-zacchera-body outline-none focus:ring-2 focus:ring-zacchera-primary" placeholder="MM/YY" />
+            <input className="w-full rounded-zacchera-small border border-zacchera-border-light bg-zacchera-form-bg px-3 py-2 font-zacchera-body outline-none focus:ring-2 focus:ring-zacchera-primary" placeholder="CVC" />
           </div>
         </div>
       </div>

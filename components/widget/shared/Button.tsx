@@ -8,12 +8,12 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export default function Button({ variant = "primary", className = "", ...props }: Props) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-zacchera-container px-4 py-2 text-sm font-medium font-zacchera-body uppercase tracking-zacchera transition disabled:opacity-50 disabled:cursor-not-allowed";
+    "inline-flex items-center justify-center gap-2 rounded-zacchera-container px-4 py-2 text-sm font-zacchera-bold font-zacchera-body uppercase tracking-zacchera transition disabled:opacity-50 disabled:cursor-not-allowed";
   const styles =
     variant === "primary"
-      ? "bg-zacchera-primary text-white hover:bg-zacchera-hover-primary"
+      ? "bg-zacchera-primary text-zacchera-text-white hover:bg-zacchera-primary-hover"
       : variant === "secondary"
-      ? "bg-zacchera-secondary text-white hover:bg-zacchera-hover-secondary"
-      : "text-zacchera-primary hover:bg-slate-100";
+      ? "bg-zacchera-secondary text-zacchera-text-white hover:bg-zacchera-secondary-hover"
+      : "text-zacchera-primary hover:bg-zacchera-bg-light";
   return <button className={`${base} ${styles} ${className}`} {...props} />;
 }

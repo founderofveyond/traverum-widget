@@ -1,27 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --trv-primary: #3ed2a7;
-  --trv-secondary: #ffb09f;
-  --trv-form-bg: #F6F1EA;
-  --trv-hover-primary: #380100;
-  --trv-hover-secondary: #FB4627;
+  /* Background colors */
   --trv-bg: #ffffff;
-  --trv-fg: #0f172a;
+  --trv-bg-light: #fbfbfc;
+  --trv-bg-beige: #f6f1ea;
+  --trv-bg-tan: #d3b298;
+  --trv-bg-blue: #206093;
+  --trv-bg-dark: #23282d;
+  --trv-bg-burgundy: #380100;
+  
+  /* Text colors */
+  --trv-text-white: #ffffff;
+  --trv-text-beige: #f6f1ea;
+  --trv-text-light-gray: #d8d5d5;
+  --trv-text-tan: #d3b298;
+  --trv-text-blue: #206093;
+  --trv-text-gray: #444444;
+  --trv-text-dark-gray: #2d2d2d;
+  --trv-text-darker-gray: #222222;
+  --trv-text-indigo: #181b31;
+  --trv-text-burgundy: #380100;
+  --trv-text-black: #000000;
+  
+  /* Border colors */
+  --trv-border-white: #ffffff;
+  --trv-border-beige: #f6f1ea;
+  --trv-border-light: #eeeeee;
+  --trv-border-gray: #cccccc;
+  
+  /* Primary colors for buttons/actions */
+  --trv-primary: #206093;
+  --trv-primary-hover: #380100;
+  --trv-secondary: #d3b298;
+  --trv-secondary-hover: #380100;
+  
+  /* Form background */
+  --trv-form-bg: #f6f1ea;
+  
+  /* Defaults */
+  --trv-fg: #222222;
 }
 
 [data-theme="dark"] {
-  --trv-primary: #3ed2a7;
-  --trv-secondary: #ffb09f;
-  --trv-form-bg: #F6F1EA;
-  --trv-hover-primary: #380100;
-  --trv-hover-secondary: #FB4627;
-  --trv-bg: #0b1220;
-  --trv-fg: #e2e8f0;
+  --trv-bg: #23282d;
+  --trv-fg: #f6f1ea;
 }
 
 html, body {
@@ -31,5 +58,8 @@ html, body {
 body {
   background: var(--trv-bg);
   color: var(--trv-fg);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Overpass', sans-serif;
+  font-size: 17.6px;
+  font-weight: 300;
+  line-height: 26.4px;
 }

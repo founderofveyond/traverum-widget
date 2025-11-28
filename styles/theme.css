@@ -5,9 +5,9 @@
 }
 
 .trv-card {
-  @apply bg-white/70 backdrop-blur rounded-zacchera-container shadow border border-slate-200;
+  @apply bg-white rounded-zacchera-container shadow border border-zacchera-border-light;
 }
 
 [data-theme="dark"] .trv-card {
-  @apply bg-slate-800/60 border-slate-700;
+  @apply bg-zacchera-bg-dark border-zacchera-border-gray;
 }

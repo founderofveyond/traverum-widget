@@ -42,9 +42,9 @@ export default function WidgetRoot({ hotelId }: { hotelId: string }) {
 function WidgetChrome() {
   useAutoResizeOnce();
   return (
-    <div className="mx-auto max-w-5xl rounded-zacchera-container bg-white px-4 py-6 font-zacchera-body">
+    <div className="mx-auto max-w-5xl rounded-zacchera-container bg-white px-4 py-6 font-zacchera-body text-zacchera-base">
       <header className="mb-4 flex items-center justify-between">
-        <h1 className="text-xl font-semibold font-zacchera-heading">Local Experiences</h1>
+        <h1 className="text-xl font-zacchera-bold font-zacchera-heading">Local Experiences</h1>
         <StepIndicator />
       </header>
       <Router />
