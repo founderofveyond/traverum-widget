@@ -17,7 +17,7 @@ export default function ExperienceCard({
 }) {
   return (
     <div className="trv-card overflow-hidden">
-      <div className="h-72 w-full overflow-hidden">
+      <div className="h-50 w-full overflow-hidden">
         <img
           src={imageUrl}
           alt={title}
