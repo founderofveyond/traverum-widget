@@ -61,6 +61,9 @@ const config: Config = {
       },
       letterSpacing: {
         'zacchera': '0.1em'
+      },
+      height: {
+        '50': '200px'
       }
     }
   },
