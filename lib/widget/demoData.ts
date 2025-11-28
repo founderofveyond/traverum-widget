@@ -5,11 +5,11 @@ export const LOADING_DELAY = 500;
 export const DEMO_EXPERIENCES: Experience[] = [
   {
     id: "exp_kayak",
-    title: "Sunset Kayak Tour",
+    title: "Sunrise Canadian canoe tour",
     imageUrl:
-      "https://images.unsplash.com/photo-1465311440653-ba9b1d9b0f5b?auto=format&fit=crop&w=1600&q=80",
+      "/images/sunrise-canoe-tour.webp",
     description:
-      "Paddle along the coastline with a guide and enjoy a breathtaking sunset over the bay.",
+      "Glide across Lake Maggiore from Angera towards Arona on a relaxed three‑and‑a‑half‑hour adventure.",
     priceCents: 6500,
     currency: "EUR",
     durationMin: 120,
