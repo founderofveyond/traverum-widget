@@ -9,7 +9,6 @@ import Cart from "@/components/widget/steps/Cart";
 import GuestForm from "@/components/widget/steps/GuestForm";
 import PaymentMock from "@/components/widget/steps/PaymentMock";
 import Confirmation from "@/components/widget/steps/Confirmation";
-import StepIndicator from "@/components/widget/shared/StepIndicator";
 
 function Router() {
   const { state } = useWidget();
@@ -43,9 +42,11 @@ function WidgetChrome() {
   useAutoResizeOnce();
   return (
     <div className="mx-auto max-w-5xl rounded-zacchera-container bg-white px-4 py-6 font-zacchera-body text-zacchera-base">
-      <header className="mb-4 flex items-center justify-between">
-        <h1 className="text-xl font-zacchera-bold font-zacchera-heading text-zacchera-text-tan">Local Experiences</h1>
-        <StepIndicator />
+      <header className="mb-6">
+        <h1 className="text-4xl font-zacchera-bold font-zacchera-heading text-zacchera-text-tan mb-2">Local Experiences</h1>
+        <p className="text-base text-zacchera-text-gray font-zacchera-body">
+          These local experiences have been chosen by Zacchera hotels. Book directly and experience Lake Maggiore the fullest.
+        </p>
       </header>
       <Router />
     </div>
