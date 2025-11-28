@@ -32,7 +32,7 @@ export default function Details() {
         <img src={experience.imageUrl} alt={experience.title} className="h-72 w-full object-cover" />
       </div>
       <div className="space-y-4 font-zacchera-body">
-        <h2 className="text-2xl font-semibold font-zacchera-body">{experience.title}</h2>
+        <h2 className="text-2xl font-semibold font-zacchera-heading">{experience.title}</h2>
         <p className="text-slate-700 font-zacchera-body">{experience.description}</p>
         <div className="flex gap-4 text-sm text-slate-600 font-zacchera-body">
           <div>Duration: {Math.round(experience.durationMin / 60)}h</div>
