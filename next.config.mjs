@@ -7,10 +7,16 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/widget/:path*',
         headers: [
-          { key: 'X-Frame-Options', value: 'ALLOWALL' },
-          { key: 'Referrer-Policy', value: 'strict-origin' }
+          {
+            key: 'Content-Security-Policy',
+            value: 'frame-ancestors *;'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin'
+          }
         ]
       }
     ];
