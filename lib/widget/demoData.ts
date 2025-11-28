@@ -21,11 +21,11 @@ export const DEMO_EXPERIENCES: Experience[] = [
   },
   {
     id: "exp_wine",
-    title: "Wine Tasting",
+    title: "Wine tasting",
     imageUrl:
-      "https://images.unsplash.com/photo-1542843137-8791a6904d14?q=80&w=1600&auto=format&fit=crop",
+      "/images/winetasting.jpg",
     description:
-      "Sample local varietals in a charming cellar with a sommelier-led tasting session.",
+      "Discover three carefully crafted mountain wines in the heart of Val d'Ossola",
     priceCents: 4500,
     currency: "EUR",
     durationMin: 90,
