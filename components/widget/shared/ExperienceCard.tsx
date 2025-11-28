@@ -17,7 +17,7 @@ export default function ExperienceCard({
 }) {
   return (
     <div className="trv-card overflow-hidden">
-      <div className="h-44 w-full overflow-hidden">
+      <div className="h-72 w-full overflow-hidden">
         <img
           src={imageUrl}
           alt={title}
@@ -29,11 +29,11 @@ export default function ExperienceCard({
           }}
         />
       </div>
-      <div className="space-y-2 p-4 font-zacchera-body">
-        <h3 className="text-lg font-zacchera-bold font-zacchera-heading">{title}</h3>
-        <p className="line-clamp-3 text-sm text-zacchera-text-gray font-zacchera-body">{description}</p>
+      <div className="space-y-3 p-6 font-zacchera-body">
+        <h3 className="text-2xl font-zacchera-bold font-zacchera-heading">{title}</h3>
+        <p className="line-clamp-3 text-base text-zacchera-text-gray font-zacchera-body">{description}</p>
         <div className="flex items-center justify-between pt-2">
-          <span className="text-base font-medium font-zacchera-body">{priceEuros}</span>
+          <span className="text-lg font-medium font-zacchera-body">{priceEuros}</span>
           <Button onClick={onView}>View</Button>
         </div>
       </div>

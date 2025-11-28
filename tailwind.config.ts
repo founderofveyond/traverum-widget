@@ -45,7 +45,7 @@ const config: Config = {
         'zacchera-hover-secondary': '#380100'
       },
       borderRadius: {
-        'zacchera-container': '50px',
+        'zacchera-container': '12px',
         'zacchera-small': '2px'
       },
       fontFamily: {
