@@ -12,7 +12,7 @@ export default function Cart() {
   const totalCents = items.reduce((sum, it) => sum + it.unitPriceCents * it.quantity, 0);
 
   return (
-    <div className="space-y-4 font-zacchera-body">
+    <div className="space-y-4 font-zacchera-body px-3 sm:px-0">
       <div className="trv-card">
         <div className="divide-y">
           {items.length === 0 ? (

@@ -18,7 +18,7 @@ export default function PaymentMock() {
   }
 
   return (
-    <div className="mx-auto max-w-md space-y-4 font-zacchera-body">
+    <div className="mx-auto max-w-md space-y-4 font-zacchera-body px-3 sm:px-0">
       <div className="trv-card p-4">
         <div className="space-y-2">
           <div className="text-sm text-zacchera-text-gray font-zacchera-body">Mock card form</div>

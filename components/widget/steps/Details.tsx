@@ -27,7 +27,7 @@ export default function Details() {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 px-3 sm:px-0">
       <div className="trv-card overflow-hidden">
         <img src={experience.imageUrl} alt={experience.title} className="h-72 w-full object-cover" />
       </div>

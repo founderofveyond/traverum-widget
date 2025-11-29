@@ -7,7 +7,7 @@ import ExperienceCard from "@/components/widget/shared/ExperienceCard";
 export default function Catalog() {
   const { dispatch } = useWidget();
   return (
-    <div className="w-full grid grid-cols-1 gap-4 sm:grid-cols-3 justify-items-stretch">
+    <div className="w-full grid grid-cols-1 gap-4 sm:grid-cols-3 justify-items-stretch px-3 sm:px-0">
       {DEMO_EXPERIENCES.map((exp) => (
         <ExperienceCard
           key={exp.id}

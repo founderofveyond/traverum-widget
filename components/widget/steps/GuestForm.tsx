@@ -28,7 +28,7 @@ export default function GuestForm() {
   }
 
   return (
-    <div className="mx-auto max-w-xl space-y-4">
+    <div className="mx-auto max-w-xl space-y-4 px-3 sm:px-0">
       <Input
         label="Full name"
         value={values.fullName}
