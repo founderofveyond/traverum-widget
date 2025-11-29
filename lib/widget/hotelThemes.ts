@@ -80,6 +80,45 @@ export const HOTEL_THEMES: Record<string, HotelTheme> = {
       description: 'Experience Lake Maggiore the fullest with our chosen experiences from the area.',
     },
   },
+  'hotel-rosa': {
+    hotelId: 'hotel-rosa',
+    name: 'Hotel Rosa Baveno',
+    colors: {
+      primary: '#8B4513', // Brown/tan - will customize to match site
+      primaryHover: '#654321',
+      secondary: '#D4AF37', // Gold accent
+      secondaryHover: '#B8941F',
+      background: '#ffffff',
+      backgroundLight: '#f8f8f8',
+      text: '#333333',
+      textGray: '#666666',
+      textDarkGray: '#2d2d2d',
+      textDarkerGray: '#222222',
+      textTan: '#8B4513',
+      border: '#e0e0e0',
+      formBg: '#f5f5f5',
+    },
+    fonts: {
+      body: 'Open Sans',
+      heading: 'Playfair Display',
+      bodyUrl: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap',
+      headingUrl: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap',
+    },
+    sizing: {
+      baseFontSize: 16,
+      baseLineHeight: 24,
+      headingSize: 40,
+      cardTitleSize: 22,
+      cardImageHeight: 220,
+      containerRadius: 8,
+      cardRadius: 8,
+      smallRadius: 4,
+    },
+    content: {
+      title: 'Esperienze Locali',
+      description: 'Scopri le migliori esperienze sul Lago Maggiore selezionate per te.',
+    },
+  },
   // Example: Add your new hotel here
   // Uncomment and customize this template to add a new hotel widget:
   //
