@@ -63,6 +63,7 @@ export default function AdminPage({ params }: { params: { hotelId: string } }) {
     root.style.setProperty("--trv-card-title-size", `${previewTheme.sizing.cardTitleSize}px`);
     root.style.setProperty("--trv-card-image-height", `${previewTheme.sizing.cardImageHeight}px`);
     root.style.setProperty("--trv-container-radius", `${previewTheme.sizing.containerRadius}px`);
+    root.style.setProperty("--trv-card-radius", `${previewTheme.sizing.cardRadius}px`);
     root.style.setProperty("--trv-small-radius", `${previewTheme.sizing.smallRadius}px`);
     
     // Load fonts
@@ -364,6 +365,20 @@ export default function AdminPage({ params }: { params: { hotelId: string } }) {
                     step="1"
                     value={theme.sizing.containerRadius}
                     onChange={(e) => updateSizing({ containerRadius: parseInt(e.target.value) })}
+                    className="w-full"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Card Radius: <span className="font-bold">{theme.sizing.cardRadius}px</span>
+                  </label>
+                  <input
+                    type="range"
+                    min="0"
+                    max="32"
+                    step="1"
+                    value={theme.sizing.cardRadius}
+                    onChange={(e) => updateSizing({ cardRadius: parseInt(e.target.value) })}
                     className="w-full"
                   />
                 </div>

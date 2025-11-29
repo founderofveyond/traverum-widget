@@ -37,6 +37,7 @@ export default function Page({ params }: { params: { hotelId: string } }) {
     document.documentElement.style.setProperty("--trv-card-title-size", `${theme.sizing.cardTitleSize}px`);
     document.documentElement.style.setProperty("--trv-card-image-height", `${theme.sizing.cardImageHeight}px`);
     document.documentElement.style.setProperty("--trv-container-radius", `${theme.sizing.containerRadius}px`);
+    document.documentElement.style.setProperty("--trv-card-radius", `${theme.sizing.cardRadius}px`);
     document.documentElement.style.setProperty("--trv-small-radius", `${theme.sizing.smallRadius}px`);
     
     // Load Google Fonts if provided and not already loaded

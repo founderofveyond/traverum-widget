@@ -31,7 +31,8 @@ export interface HotelTheme {
     // Card dimensions
     cardImageHeight: number;     // Card image height in px
     // Border radius (in px)
-    containerRadius: number;     // Main container/card radius
+    containerRadius: number;     // Main container radius
+    cardRadius: number;          // Experience card radius
     smallRadius: number;          // Small elements (inputs, buttons)
   };
   content?: {
@@ -71,6 +72,7 @@ export const HOTEL_THEMES: Record<string, HotelTheme> = {
       cardTitleSize: 24,
       cardImageHeight: 200,
       containerRadius: 12,
+      cardRadius: 12,
       smallRadius: 2,
     },
     content: {

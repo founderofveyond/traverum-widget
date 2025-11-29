@@ -45,7 +45,7 @@ function WidgetChrome() {
   useAutoResizeOnce();
   
   return (
-    <div className="mx-auto max-w-5xl rounded-zacchera-container bg-white px-4 py-6 font-zacchera-body text-zacchera-base">
+    <div className="mx-auto max-w-5xl rounded-zacchera-container px-4 py-6 font-zacchera-body text-zacchera-base" style={{ backgroundColor: 'var(--trv-bg-light)' }}>
       <header className="mb-6">
         <h1 
           className="font-zacchera-bold font-zacchera-heading text-zacchera-text-tan mb-2"

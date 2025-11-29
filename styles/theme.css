@@ -5,7 +5,8 @@
 }
 
 .trv-card {
-  @apply bg-white rounded-zacchera-container shadow border border-zacchera-border-light;
+  @apply bg-white shadow border border-zacchera-border-light;
+  border-radius: var(--trv-card-radius, 12px);
 }
 
 [data-theme="dark"] .trv-card {
