@@ -58,7 +58,7 @@ export default function Page({ params }: { params: { hotelId: string } }) {
   }, [theme]);
 
   return (
-    <div className="trv-container min-h-screen">
+    <div className="trv-container">
       <WidgetRoot hotelId={params.hotelId} />
     </div>
   );

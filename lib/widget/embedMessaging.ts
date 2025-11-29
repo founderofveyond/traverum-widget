@@ -2,13 +2,36 @@
 
 export function initAutoResize() {
   if (typeof window === "undefined") return () => {};
-  const ro = new ResizeObserver(entries => {
-    for (const entry of entries) {
-      const height = Math.ceil(entry.contentRect.height);
-      window.parent?.postMessage({ type: "traverum.height", height }, "*");
-    }
+  
+  const updateHeight = () => {
+    // Get the actual content height, not including potential infinite scroll
+    const body = document.body;
+    const html = document.documentElement;
+    
+    // Use the smaller of scrollHeight and offsetHeight to avoid infinite growth
+    const height = Math.min(
+      Math.max(body.scrollHeight, body.offsetHeight),
+      Math.max(html.scrollHeight, html.offsetHeight)
+    );
+    
+    window.parent?.postMessage({ type: "traverum.height", height: Math.ceil(height) }, "*");
+  };
+
+  // Initial height calculation
+  setTimeout(updateHeight, 100);
+
+  // Use ResizeObserver on body instead of documentElement to avoid infinite loops
+  const ro = new ResizeObserver(() => {
+    updateHeight();
   });
-  const el = document.documentElement;
-  ro.observe(el);
-  return () => ro.disconnect();
+  
+  ro.observe(document.body);
+  
+  // Also update on window resize
+  window.addEventListener('resize', updateHeight);
+  
+  return () => {
+    ro.disconnect();
+    window.removeEventListener('resize', updateHeight);
+  };
 }
