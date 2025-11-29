@@ -30,7 +30,12 @@ export default function ExperienceCard({
         />
       </div>
       <div className="space-y-3 p-6 font-zacchera-body">
-        <h3 className="text-2xl font-zacchera-bold font-zacchera-heading">{title}</h3>
+        <h3 
+          className="font-zacchera-bold font-zacchera-heading"
+          style={{ fontSize: 'var(--trv-card-title-size)' }}
+        >
+          {title}
+        </h3>
         <p className="line-clamp-3 text-base text-zacchera-text-gray font-zacchera-body">{description}</p>
         <div className="flex items-center justify-between pt-2">
           <span className="text-lg font-medium font-zacchera-body">{priceEuros}</span>

@@ -8,52 +8,52 @@ const config: Config = {
         primary: 'var(--trv-primary)',
         background: 'var(--trv-bg)',
         foreground: 'var(--trv-fg)',
-        // Background colors
-        'zacchera-bg': '#ffffff',
-        'zacchera-bg-light': '#fbfbfc',
+        // Background colors - using CSS variables for dynamic theming
+        'zacchera-bg': 'var(--trv-bg)',
+        'zacchera-bg-light': 'var(--trv-bg-light)',
         'zacchera-bg-beige': '#f6f1ea',
         'zacchera-bg-tan': '#d3b298',
         'zacchera-bg-blue': '#206093',
         'zacchera-bg-dark': '#23282d',
         'zacchera-bg-burgundy': '#380100',
-        // Text colors
+        // Text colors - using CSS variables for dynamic theming
         'zacchera-text-white': '#ffffff',
         'zacchera-text-beige': '#f6f1ea',
         'zacchera-text-light-gray': '#d8d5d5',
-        'zacchera-text-tan': '#d3b298',
+        'zacchera-text-tan': 'var(--trv-text-tan)',
         'zacchera-text-blue': '#206093',
-        'zacchera-text-gray': '#444444',
-        'zacchera-text-dark-gray': '#2d2d2d',
-        'zacchera-text-darker-gray': '#222222',
+        'zacchera-text-gray': 'var(--trv-text-gray)',
+        'zacchera-text-dark-gray': 'var(--trv-text-dark-gray)',
+        'zacchera-text-darker-gray': 'var(--trv-text-darker-gray)',
         'zacchera-text-indigo': '#181b31',
         'zacchera-text-burgundy': '#380100',
         'zacchera-text-black': '#000000',
-        // Border colors
+        // Border colors - using CSS variables for dynamic theming
         'zacchera-border-white': '#ffffff',
         'zacchera-border-beige': '#f6f1ea',
-        'zacchera-border-light': '#eeeeee',
+        'zacchera-border-light': 'var(--trv-border-light)',
         'zacchera-border-gray': '#cccccc',
-        // Primary/secondary for buttons
-        'zacchera-primary': '#206093',
-        'zacchera-primary-hover': '#380100',
-        'zacchera-secondary': '#d3b298',
-        'zacchera-secondary-hover': '#380100',
-        // Form background
-        'zacchera-form-bg': '#f6f1ea',
+        // Primary/secondary for buttons - using CSS variables for dynamic theming
+        'zacchera-primary': 'var(--trv-primary)',
+        'zacchera-primary-hover': 'var(--trv-primary-hover)',
+        'zacchera-secondary': 'var(--trv-secondary)',
+        'zacchera-secondary-hover': 'var(--trv-secondary-hover)',
+        // Form background - using CSS variables for dynamic theming
+        'zacchera-form-bg': 'var(--trv-form-bg)',
         // Legacy support
-        'zacchera-hover-primary': '#380100',
-        'zacchera-hover-secondary': '#380100'
+        'zacchera-hover-primary': 'var(--trv-primary-hover)',
+        'zacchera-hover-secondary': 'var(--trv-secondary-hover)'
       },
       borderRadius: {
-        'zacchera-container': '12px',
-        'zacchera-small': '2px'
+        'zacchera-container': 'var(--trv-container-radius)',
+        'zacchera-small': 'var(--trv-small-radius)'
       },
       fontFamily: {
-        'zacchera-body': ['Overpass', 'sans-serif'],
-        'zacchera-heading': ['New York', 'serif']
+        'zacchera-body': ['var(--trv-font-body)', 'sans-serif'],
+        'zacchera-heading': ['var(--trv-font-heading)', 'serif']
       },
       fontSize: {
-        'zacchera-base': ['17.6px', { lineHeight: '26.4px' }]
+        'zacchera-base': ['var(--trv-base-font-size)', { lineHeight: 'var(--trv-base-line-height)' }]
       },
       fontWeight: {
         'zacchera-light': '300',
@@ -63,7 +63,7 @@ const config: Config = {
         'zacchera': '0.1em'
       },
       height: {
-        '50': '200px'
+        '50': 'var(--trv-card-image-height)'
       }
     }
   },

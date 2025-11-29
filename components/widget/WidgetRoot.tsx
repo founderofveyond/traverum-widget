@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { WidgetProvider, useWidget } from "@/lib/widget/widgetState";
 import { initAutoResize } from "@/lib/widget/embedMessaging";
+import { getHotelTheme } from "@/lib/widget/hotelThemes";
 import Catalog from "@/components/widget/steps/Catalog";
 import Details from "@/components/widget/steps/Details";
 import Cart from "@/components/widget/steps/Cart";
@@ -39,13 +40,21 @@ export default function WidgetRoot({ hotelId }: { hotelId: string }) {
 }
 
 function WidgetChrome() {
+  const { state } = useWidget();
+  const theme = useMemo(() => getHotelTheme(state.hotelId), [state.hotelId]);
   useAutoResizeOnce();
+  
   return (
     <div className="mx-auto max-w-5xl rounded-zacchera-container bg-white px-4 py-6 font-zacchera-body text-zacchera-base">
       <header className="mb-6">
-        <h1 className="text-4xl font-zacchera-bold font-zacchera-heading text-zacchera-text-tan mb-2">Local Experiences</h1>
+        <h1 
+          className="font-zacchera-bold font-zacchera-heading text-zacchera-text-tan mb-2"
+          style={{ fontSize: 'var(--trv-heading-size)' }}
+        >
+          {theme.content?.title || 'Local Experiences'}
+        </h1>
         <p className="text-base text-zacchera-text-gray font-zacchera-body">
-          Experience Lake Maggiore the fullest with our chosen experiences from the area.
+          {theme.content?.description || 'Discover amazing experiences in your area.'}
         </p>
       </header>
       <Router />

@@ -50,6 +50,19 @@
   /* Form background */
   --trv-form-bg: #f6f1ea;
   
+  /* Fonts */
+  --trv-font-body: 'Overpass', sans-serif;
+  --trv-font-heading: 'New York', serif;
+  
+  /* Sizing */
+  --trv-base-font-size: 17.6px;
+  --trv-base-line-height: 26.4px;
+  --trv-heading-size: 36px;
+  --trv-card-title-size: 24px;
+  --trv-card-image-height: 200px;
+  --trv-container-radius: 12px;
+  --trv-small-radius: 2px;
+  
   /* Defaults */
   --trv-fg: #222222;
 }
@@ -66,8 +79,8 @@ html, body {
 body {
   background: var(--trv-bg);
   color: var(--trv-fg);
-  font-family: 'Overpass', sans-serif;
-  font-size: 17.6px;
+  font-family: var(--trv-font-body);
+  font-size: var(--trv-base-font-size);
   font-weight: 300;
-  line-height: 26.4px;
+  line-height: var(--trv-base-line-height);
 }

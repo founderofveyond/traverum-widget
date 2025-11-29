@@ -1,0 +1,120 @@
+export interface HotelTheme {
+  hotelId: string;
+  name: string;
+  colors: {
+    primary: string;
+    primaryHover: string;
+    secondary: string;
+    secondaryHover: string;
+    background: string;
+    backgroundLight: string;
+    text: string;
+    textGray: string;
+    textDarkGray: string;
+    textDarkerGray: string;
+    textTan?: string;
+    border: string;
+    formBg: string;
+  };
+  fonts: {
+    body: string;
+    heading: string;
+    bodyUrl?: string;
+    headingUrl?: string;
+  };
+  sizing: {
+    // Font sizes (in px)
+    baseFontSize: number;        // Base body font size
+    baseLineHeight: number;      // Base line height
+    headingSize: number;         // Heading font size (h1)
+    cardTitleSize: number;        // Card title size
+    // Card dimensions
+    cardImageHeight: number;     // Card image height in px
+    // Border radius (in px)
+    containerRadius: number;     // Main container/card radius
+    smallRadius: number;          // Small elements (inputs, buttons)
+  };
+  content?: {
+    title: string;
+    description: string;
+  };
+}
+
+export const HOTEL_THEMES: Record<string, HotelTheme> = {
+  zacchera: {
+    hotelId: 'zacchera',
+    name: 'Zacchera Hotels',
+    colors: {
+      primary: '#206093',
+      primaryHover: '#380100',
+      secondary: '#d3b298',
+      secondaryHover: '#380100',
+      background: '#ffffff',
+      backgroundLight: '#fbfbfc',
+      text: '#222222',
+      textGray: '#444444',
+      textDarkGray: '#2d2d2d',
+      textDarkerGray: '#222222',
+      textTan: '#d3b298',
+      border: '#eeeeee',
+      formBg: '#f6f1ea',
+    },
+    fonts: {
+      body: 'Overpass',
+      heading: 'New York',
+      bodyUrl: 'https://fonts.googleapis.com/css2?family=Overpass:wght@300;700&display=swap',
+    },
+    sizing: {
+      baseFontSize: 17.6,
+      baseLineHeight: 26.4,
+      headingSize: 36,
+      cardTitleSize: 24,
+      cardImageHeight: 200,
+      containerRadius: 12,
+      smallRadius: 2,
+    },
+    content: {
+      title: 'Local Experiences',
+      description: 'Experience Lake Maggiore the fullest with our chosen experiences from the area.',
+    },
+  },
+  // Example: Add your new hotel here
+  // Uncomment and customize this template to add a new hotel widget:
+  //
+  // newhotel: {
+  //   hotelId: 'newhotel',
+  //   name: 'New Hotel',
+  //   colors: {
+  //     primary: '#your-primary-color',        // Main brand color (buttons, links)
+  //     primaryHover: '#your-primary-hover',   // Hover state for primary
+  //     secondary: '#your-secondary',          // Secondary brand color
+  //     secondaryHover: '#your-secondary-hover', // Hover state for secondary
+  //     background: '#ffffff',                 // Main background
+  //     backgroundLight: '#f8f9fa',            // Light background variant
+  //     text: '#333333',                       // Main text color
+  //     textGray: '#666666',                   // Secondary text color
+  //     textDarkGray: '#2d2d2d',               // Dark gray text
+  //     textDarkerGray: '#222222',             // Darker gray text
+  //     textTan: '#your-accent-color',         // Optional accent color (for headings)
+  //     border: '#e0e0e0',                     // Border color
+  //     formBg: '#f5f5f5',                     // Form input background
+  //   },
+  //   fonts: {
+  //     body: 'Inter',                         // Body font name (must match Google Fonts or custom font)
+  //     heading: 'Playfair Display',           // Heading font name
+  //     bodyUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap',
+  //     headingUrl: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap',
+  //   },
+  //   content: {
+  //     title: 'Local Experiences',            // Widget header title
+  //     description: 'Discover amazing experiences in your area.', // Widget header description
+  //   },
+  // },
+  //
+  // To use: Visit /widget/newhotel (or whatever hotelId you set)
+};
+
+export function getHotelTheme(hotelId: string): HotelTheme {
+  return HOTEL_THEMES[hotelId] || HOTEL_THEMES.zacchera; // fallback to zacchera
+}
+
