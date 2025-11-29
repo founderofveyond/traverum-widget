@@ -16,7 +16,7 @@ export default function ExperienceCard({
   onView: () => void;
 }) {
   return (
-    <div className="trv-card overflow-hidden w-full max-w-full sm:w-auto sm:max-w-none mx-auto sm:mx-0">
+    <div className="trv-card overflow-hidden w-full max-w-full sm:w-auto sm:max-w-none">
       <div className="h-50 w-full overflow-hidden">
         <img
           src={imageUrl}
