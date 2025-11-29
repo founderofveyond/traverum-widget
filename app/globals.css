@@ -73,9 +73,6 @@
   --trv-fg: #f6f1ea;
 }
 
-html, body {
-  height: 100%;
-}
 
 body {
   background: var(--trv-bg);

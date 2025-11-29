@@ -3,35 +3,64 @@
 export function initAutoResize() {
   if (typeof window === "undefined") return () => {};
   
+  let lastSentHeight = 0;
+  let debounceTimer: NodeJS.Timeout | null = null;
+  const MAX_HEIGHT = 5000; // Cap to prevent infinite growth
+  const HEIGHT_THRESHOLD = 5; // Only send if height changed by more than 5px
+  
   const updateHeight = () => {
-    // Get the actual content height, not including potential infinite scroll
+    // Get the actual content height
     const body = document.body;
     const html = document.documentElement;
     
-    // Use the smaller of scrollHeight and offsetHeight to avoid infinite growth
-    const height = Math.min(
-      Math.max(body.scrollHeight, body.offsetHeight),
-      Math.max(html.scrollHeight, html.offsetHeight)
+    // Calculate height using the maximum of scroll/offset heights
+    const calculatedHeight = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.scrollHeight,
+      html.offsetHeight
     );
     
-    window.parent?.postMessage({ type: "traverum.height", height: Math.ceil(height) }, "*");
+    // Cap the height to prevent infinite growth
+    const height = Math.min(calculatedHeight, MAX_HEIGHT);
+    const roundedHeight = Math.ceil(height);
+    
+    // Only send if height changed significantly
+    if (Math.abs(roundedHeight - lastSentHeight) > HEIGHT_THRESHOLD) {
+      lastSentHeight = roundedHeight;
+      window.parent?.postMessage({ type: "traverum.height", height: roundedHeight }, "*");
+    }
   };
 
-  // Initial height calculation
+  // Debounced update function
+  const debouncedUpdate = () => {
+    if (debounceTimer) {
+      clearTimeout(debounceTimer);
+    }
+    debounceTimer = setTimeout(updateHeight, 200);
+  };
+
+  // Initial height calculation after a short delay
   setTimeout(updateHeight, 100);
 
-  // Use ResizeObserver on body instead of documentElement to avoid infinite loops
+  // Find the widget container to observe instead of entire body
+  const widgetContainer = document.querySelector('.trv-container') || document.body;
+  
+  // Use ResizeObserver on widget container
   const ro = new ResizeObserver(() => {
-    updateHeight();
+    debouncedUpdate();
   });
   
-  ro.observe(document.body);
+  ro.observe(widgetContainer);
   
-  // Also update on window resize
-  window.addEventListener('resize', updateHeight);
+  // Also update on window resize (debounced)
+  window.addEventListener('resize', debouncedUpdate);
   
   return () => {
     ro.disconnect();
-    window.removeEventListener('resize', updateHeight);
+    window.removeEventListener('resize', debouncedUpdate);
+    if (debounceTimer) {
+      clearTimeout(debounceTimer);
+    }
   };
 }
