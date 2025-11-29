@@ -63,11 +63,11 @@ export default function Details() {
             className="w-32 rounded-zacchera-small border border-zacchera-border-light bg-zacchera-form-bg px-3 py-2 font-zacchera-body outline-none focus:ring-2 focus:ring-zacchera-primary"
           />
         </div>
-        <div className="flex items-center justify-between pt-2">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0 pt-2">
           <div className="text-xl font-zacchera-bold font-zacchera-body">€ {(experience.priceCents / 100).toFixed(2)}</div>
-          <div className="flex gap-2">
-            <Button variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "catalog" })}>Back</Button>
-            <Button onClick={addToCart}>Add to cart</Button>
+          <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+            <Button className="w-full sm:w-auto" variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "catalog" })}>Back</Button>
+            <Button className="w-full sm:w-auto" onClick={addToCart}>Add to cart</Button>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ export default function Confirmation() {
       <h2 className="text-2xl font-zacchera-bold font-zacchera-heading">Booking Confirmed</h2>
       <p className="mt-2 text-zacchera-text-gray font-zacchera-body">Your reference: {state.fakeBookingId}</p>
       <div className="mt-6">
-        <Button onClick={() => dispatch({ type: "RESET" })}>Book another experience</Button>
+        <Button className="w-full sm:w-auto" onClick={() => dispatch({ type: "RESET" })}>Book another experience</Button>
       </div>
     </div>
   );

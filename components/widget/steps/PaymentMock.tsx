@@ -29,9 +29,9 @@ export default function PaymentMock() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between">
-        <Button variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "guest" })}>Back</Button>
-        <Button onClick={complete} disabled={loading}>{loading ? "Processing..." : "Complete Booking"}</Button>
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0">
+        <Button className="w-full sm:w-auto" variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "guest" })}>Back</Button>
+        <Button className="w-full sm:w-auto" onClick={complete} disabled={loading}>{loading ? "Processing..." : "Complete Booking"}</Button>
       </div>
     </div>
   );

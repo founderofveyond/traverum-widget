@@ -48,9 +48,9 @@ export default function GuestForm() {
         error={errors.phone}
         onChange={(e) => setValues(v => ({ ...v, phone: e.target.value }))}
       />
-      <div className="flex items-center justify-between pt-2">
-        <Button variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "cart" })}>Back</Button>
-        <Button onClick={submit}>Continue to payment</Button>
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0 pt-2">
+        <Button className="w-full sm:w-auto" variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "cart" })}>Back</Button>
+        <Button className="w-full sm:w-auto" onClick={submit}>Continue to payment</Button>
       </div>
     </div>
   );

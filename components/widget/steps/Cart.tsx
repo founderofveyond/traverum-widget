@@ -47,13 +47,13 @@ export default function Cart() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
-        <Button variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "catalog" })}>
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0">
+        <Button className="w-full sm:w-auto" variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "catalog" })}>
           Continue browsing
         </Button>
-        <div className="flex items-center gap-4">
-          <div className="text-lg font-zacchera-bold font-zacchera-body">Total: € {(totalCents / 100).toFixed(2)}</div>
-          <Button disabled={items.length === 0} onClick={() => dispatch({ type: "SET_STEP", step: "guest" })}>
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
+          <div className="text-lg font-zacchera-bold font-zacchera-body text-center sm:text-left">Total: € {(totalCents / 100).toFixed(2)}</div>
+          <Button className="w-full sm:w-auto" disabled={items.length === 0} onClick={() => dispatch({ type: "SET_STEP", step: "guest" })}>
             Checkout
           </Button>
         </div>
