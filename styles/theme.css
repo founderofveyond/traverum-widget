@@ -1,6 +1,6 @@
 /* Widget theming helpers */
 .trv-container {
-  background: var(--trv-bg);
+  background: var(--trv-bg-light);
   color: var(--trv-fg);
 }
 
