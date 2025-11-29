@@ -75,10 +75,12 @@
 
 
 body {
-  background: var(--trv-bg);
+  background: var(--trv-bg-light);
   color: var(--trv-fg);
   font-family: var(--trv-font-body);
   font-size: var(--trv-base-font-size);
   font-weight: 300;
   line-height: var(--trv-base-line-height);
+  margin: 0;
+  padding: 0;
 }
