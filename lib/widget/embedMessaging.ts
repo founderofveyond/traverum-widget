@@ -9,20 +9,32 @@ export function initAutoResize() {
   const HEIGHT_THRESHOLD = 5; // Only send if height changed by more than 5px
   
   const updateHeight = () => {
-    // Get the actual content height
-    const body = document.body;
-    const html = document.documentElement;
+    // Get the actual widget content container
+    const widgetContainer = document.querySelector('.max-w-5xl') || 
+                            document.querySelector('.trv-container');
     
-    // Calculate height using the maximum of scroll/offset heights
-    const calculatedHeight = Math.max(
-      body.scrollHeight,
-      body.offsetHeight,
-      html.scrollHeight,
-      html.offsetHeight
-    );
+    if (!widgetContainer) {
+      // Fallback to body if widget container not found
+      const body = document.body;
+      const calculatedHeight = Math.min(
+        Math.max(body.scrollHeight, body.offsetHeight),
+        MAX_HEIGHT
+      );
+      const roundedHeight = Math.ceil(calculatedHeight);
+      
+      if (Math.abs(roundedHeight - lastSentHeight) > HEIGHT_THRESHOLD) {
+        lastSentHeight = roundedHeight;
+        window.parent?.postMessage({ type: "traverum.height", height: roundedHeight }, "*");
+      }
+      return;
+    }
+    
+    // Measure only the widget container, not the entire document
+    const containerHeight = (widgetContainer as HTMLElement).offsetHeight || 
+                           (widgetContainer as HTMLElement).scrollHeight;
     
     // Cap the height to prevent infinite growth
-    const height = Math.min(calculatedHeight, MAX_HEIGHT);
+    const height = Math.min(containerHeight, MAX_HEIGHT);
     const roundedHeight = Math.ceil(height);
     
     // Only send if height changed significantly
@@ -43,12 +55,20 @@ export function initAutoResize() {
   // Initial height calculation after a short delay
   setTimeout(updateHeight, 100);
 
-  // Find the widget container to observe instead of entire body
-  const widgetContainer = document.querySelector('.trv-container') || document.body;
+  // Find the actual widget content container to observe
+  // Look for the main widget div with max-w-5xl class
+  const widgetContainer = document.querySelector('.max-w-5xl') || 
+                          document.querySelector('.trv-container') || 
+                          document.body;
   
   // Use ResizeObserver on widget container
-  const ro = new ResizeObserver(() => {
-    debouncedUpdate();
+  const ro = new ResizeObserver((entries) => {
+    // Only update if the observed element actually changed
+    for (const entry of entries) {
+      if (entry.contentRect.height > 0) {
+        debouncedUpdate();
+      }
+    }
   });
   
   ro.observe(widgetContainer);

@@ -46,17 +46,6 @@ function WidgetChrome() {
   
   return (
     <div className="mx-auto max-w-5xl rounded-zacchera-container px-4 py-6 font-zacchera-body text-zacchera-base" style={{ backgroundColor: 'var(--trv-bg-light)' }}>
-      <header className="mb-6">
-        <h1 
-          className="font-zacchera-bold font-zacchera-heading text-zacchera-text-tan mb-2"
-          style={{ fontSize: 'var(--trv-heading-size)' }}
-        >
-          {theme.content?.title || 'Local Experiences'}
-        </h1>
-        <p className="text-base text-zacchera-text-gray font-zacchera-body">
-          {theme.content?.description || 'Discover amazing experiences in your area.'}
-        </p>
-      </header>
       <Router />
     </div>
   );
