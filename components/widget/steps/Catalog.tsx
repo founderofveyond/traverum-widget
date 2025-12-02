@@ -9,6 +9,36 @@ export default function Catalog() {
   return (
     <div className="w-full">
       <div className="mx-auto" style={{ maxWidth: '1170px', width: '100%', paddingLeft: '15px', paddingRight: '15px' }}>
+        {/* Title Section */}
+        <div className="text-left mb-6 sm:mb-8">
+          <h5 
+            className="text-left uppercase font-zacchera-heading font-zacchera-bold mb-4"
+            style={{ 
+              fontSize: '40px',
+              letterSpacing: '0.1em',
+              color: '#d3b298',
+              paddingBottom: '20px',
+              lineHeight: '1.2',
+              margin: '0'
+            }}
+          >
+            LOCAL EXPERIENCES
+          </h5>
+          <p 
+            className="text-left font-zacchera-body"
+            style={{
+              fontSize: 'var(--trv-base-font-size)',
+              lineHeight: 'var(--trv-base-line-height)',
+              color: 'var(--trv-text-darker-gray)',
+              marginTop: '0',
+              marginBottom: '0'
+            }}
+          >
+            These are our selected experiences from the area. Start booking by clicking view details.
+          </p>
+        </div>
+        
+        {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-items-stretch">
           {DEMO_EXPERIENCES.map((exp) => (
             <ExperienceCard
