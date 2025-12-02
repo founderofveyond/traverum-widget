@@ -34,49 +34,50 @@ export default function Details() {
             <img src={experience.imageUrl} alt={experience.title} className="h-72 w-full object-cover" />
           </div>
           <div className="space-y-4 font-zacchera-body">
-        <h2 
-          className="text-2xl font-zacchera-bold font-zacchera-heading"
-          style={{ color: 'var(--trv-text-tan)' }}
-        >
-          {experience.title}
-        </h2>
-        <p className="text-zacchera-text-darker-gray font-zacchera-body">{experience.description}</p>
-        <div className="flex gap-4 text-sm text-zacchera-text-gray font-zacchera-body">
-          <div>Duration: {Math.round(experience.durationMin / 60)}h</div>
-          <div>Max: {experience.maxParticipants} people</div>
-        </div>
-        <div className="space-y-2">
-          <label className="text-sm text-zacchera-text-gray font-zacchera-body">Select date/time</label>
-          <select
-            className="w-full rounded-zacchera-small border border-zacchera-border-light bg-zacchera-form-bg px-3 py-2 font-zacchera-body outline-none focus:ring-2 focus:ring-zacchera-primary"
-            value={slotId}
-            onChange={(e) => setSlotId(e.target.value)}
-          >
-            {experience.slots.map(s => (
-              <option key={s.id} value={s.id}>
-                {new Date(s.startAt).toLocaleString()} · {s.remaining} spots left
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="space-y-2">
-          <label className="text-sm text-zacchera-text-gray font-zacchera-body">Participants</label>
-          <input
-            type="number"
-            min={1}
-            max={experience.maxParticipants}
-            value={qty}
-            onChange={(e) => setQty(Number(e.target.value))}
-            className="w-32 rounded-zacchera-small border border-zacchera-border-light bg-zacchera-form-bg px-3 py-2 font-zacchera-body outline-none focus:ring-2 focus:ring-zacchera-primary"
-          />
-        </div>
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0 pt-2">
-          <div className="text-xl font-zacchera-bold font-zacchera-body">€ {(experience.priceCents / 100).toFixed(2)}</div>
-          <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-            <Button className="w-full sm:w-auto" variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "catalog" })}>Back</Button>
-            <Button className="w-full sm:w-auto" onClick={addToCart}>Add to cart</Button>
+            <h2 
+              className="text-2xl font-zacchera-bold font-zacchera-heading"
+              style={{ color: 'var(--trv-text-tan)' }}
+            >
+              {experience.title}
+            </h2>
+            <p className="text-zacchera-text-darker-gray font-zacchera-body">{experience.description}</p>
+            <div className="flex gap-4 text-sm text-zacchera-text-gray font-zacchera-body">
+              <div>Duration: {Math.round(experience.durationMin / 60)}h</div>
+              <div>Max: {experience.maxParticipants} people</div>
+            </div>
+            <div className="space-y-2">
+              <label className="text-sm text-zacchera-text-gray font-zacchera-body">Select date/time</label>
+              <select
+                className="w-full rounded-zacchera-small border border-zacchera-border-light bg-zacchera-form-bg px-3 py-2 font-zacchera-body outline-none focus:ring-2 focus:ring-zacchera-primary"
+                value={slotId}
+                onChange={(e) => setSlotId(e.target.value)}
+              >
+                {experience.slots.map(s => (
+                  <option key={s.id} value={s.id}>
+                    {new Date(s.startAt).toLocaleString()} · {s.remaining} spots left
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="space-y-2">
+              <label className="text-sm text-zacchera-text-gray font-zacchera-body">Participants</label>
+              <input
+                type="number"
+                min={1}
+                max={experience.maxParticipants}
+                value={qty}
+                onChange={(e) => setQty(Number(e.target.value))}
+                className="w-32 rounded-zacchera-small border border-zacchera-border-light bg-zacchera-form-bg px-3 py-2 font-zacchera-body outline-none focus:ring-2 focus:ring-zacchera-primary"
+              />
+            </div>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0 pt-2">
+              <div className="text-xl font-zacchera-bold font-zacchera-body">€ {(experience.priceCents / 100).toFixed(2)}</div>
+              <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+                <Button className="w-full sm:w-auto" variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "catalog" })}>Back</Button>
+                <Button className="w-full sm:w-auto" onClick={addToCart}>Add to cart</Button>
+              </div>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>

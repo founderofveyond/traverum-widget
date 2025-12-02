@@ -15,7 +15,7 @@ export default function Cart() {
     <div className="w-full">
       <div className="mx-auto" style={{ maxWidth: '1170px', width: '100%', paddingLeft: '15px', paddingRight: '15px' }}>
         <div className="space-y-4 font-zacchera-body">
-      <div className="trv-card">
+          <div className="trv-card">
         <div className="divide-y">
           {items.length === 0 ? (
             <div className="p-4 text-sm text-zacchera-text-gray font-zacchera-body">Your cart is empty.</div>
@@ -51,19 +51,20 @@ export default function Cart() {
               );
             })
           )}
-        </div>
-      </div>
+          </div>
+          </div>
 
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0">
-        <Button className="w-full sm:w-auto" variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "catalog" })}>
-          Continue browsing
-        </Button>
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
-          <div className="text-lg font-zacchera-bold font-zacchera-body text-center sm:text-left">Total: € {(totalCents / 100).toFixed(2)}</div>
-          <Button className="w-full sm:w-auto" disabled={items.length === 0} onClick={() => dispatch({ type: "SET_STEP", step: "guest" })}>
-            Checkout
-          </Button>
-        </div>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0">
+            <Button className="w-full sm:w-auto" variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "catalog" })}>
+              Continue browsing
+            </Button>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
+              <div className="text-lg font-zacchera-bold font-zacchera-body text-center sm:text-left">Total: € {(totalCents / 100).toFixed(2)}</div>
+              <Button className="w-full sm:w-auto" disabled={items.length === 0} onClick={() => dispatch({ type: "SET_STEP", step: "guest" })}>
+                Checkout
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

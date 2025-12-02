@@ -31,28 +31,29 @@ export default function GuestForm() {
     <div className="w-full">
       <div className="mx-auto" style={{ maxWidth: '1170px', width: '100%', paddingLeft: '15px', paddingRight: '15px' }}>
         <div className="mx-auto max-w-xl space-y-4">
-      <Input
-        label="Full name"
-        value={values.fullName}
-        error={errors.fullName}
-        onChange={(e) => setValues(v => ({ ...v, fullName: e.target.value }))}
-      />
-      <Input
-        label="Email"
-        type="email"
-        value={values.email}
-        error={errors.email}
-        onChange={(e) => setValues(v => ({ ...v, email: e.target.value }))}
-      />
-      <Input
-        label="Phone"
-        value={values.phone}
-        error={errors.phone}
-        onChange={(e) => setValues(v => ({ ...v, phone: e.target.value }))}
-      />
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0 pt-2">
-        <Button className="w-full sm:w-auto" variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "cart" })}>Back</Button>
-        <Button className="w-full sm:w-auto" onClick={submit}>Continue to payment</Button>
+          <Input
+            label="Full name"
+            value={values.fullName}
+            error={errors.fullName}
+            onChange={(e) => setValues(v => ({ ...v, fullName: e.target.value }))}
+          />
+          <Input
+            label="Email"
+            type="email"
+            value={values.email}
+            error={errors.email}
+            onChange={(e) => setValues(v => ({ ...v, email: e.target.value }))}
+          />
+          <Input
+            label="Phone"
+            value={values.phone}
+            error={errors.phone}
+            onChange={(e) => setValues(v => ({ ...v, phone: e.target.value }))}
+          />
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0 pt-2">
+            <Button className="w-full sm:w-auto" variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "cart" })}>Back</Button>
+            <Button className="w-full sm:w-auto" onClick={submit}>Continue to payment</Button>
+          </div>
         </div>
       </div>
     </div>
