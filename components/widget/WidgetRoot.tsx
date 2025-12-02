@@ -45,7 +45,7 @@ function WidgetChrome() {
   useAutoResizeOnce();
   
   return (
-    <div className="w-full sm:mx-auto sm:max-w-5xl px-0 py-8 sm:py-12 font-zacchera-body text-zacchera-base" style={{ backgroundColor: 'var(--trv-bg)', minHeight: '100%' }}>
+    <div className="w-full font-zacchera-body text-zacchera-base" style={{ minHeight: '100%' }}>
       <Router />
     </div>
   );

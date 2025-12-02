@@ -58,7 +58,7 @@ export default function Page({ params }: { params: { hotelId: string } }) {
   }, [theme]);
 
   return (
-    <div className="trv-container" style={{ backgroundColor: 'var(--trv-bg)' }}>
+    <div className="trv-container" style={{ backgroundColor: 'transparent' }}>
       <WidgetRoot hotelId={params.hotelId} />
     </div>
   );

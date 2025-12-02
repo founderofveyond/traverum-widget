@@ -12,7 +12,9 @@ export default function Cart() {
   const totalCents = items.reduce((sum, it) => sum + it.unitPriceCents * it.quantity, 0);
 
   return (
-    <div className="space-y-4 font-zacchera-body px-3 sm:px-0">
+    <div className="w-full">
+      <div className="mx-auto" style={{ maxWidth: '1170px', width: '100%', paddingLeft: '15px', paddingRight: '15px' }}>
+        <div className="space-y-4 font-zacchera-body">
       <div className="trv-card">
         <div className="divide-y">
           {items.length === 0 ? (
@@ -61,6 +63,7 @@ export default function Cart() {
           <Button className="w-full sm:w-auto" disabled={items.length === 0} onClick={() => dispatch({ type: "SET_STEP", step: "guest" })}>
             Checkout
           </Button>
+        </div>
         </div>
       </div>
     </div>

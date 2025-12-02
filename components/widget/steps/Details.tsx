@@ -27,11 +27,13 @@ export default function Details() {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 px-3 sm:px-0">
-      <div className="trv-card overflow-hidden">
-        <img src={experience.imageUrl} alt={experience.title} className="h-72 w-full object-cover" />
-      </div>
-      <div className="space-y-4 font-zacchera-body">
+    <div className="w-full">
+      <div className="mx-auto" style={{ maxWidth: '1170px', width: '100%', paddingLeft: '15px', paddingRight: '15px' }}>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div className="trv-card overflow-hidden">
+            <img src={experience.imageUrl} alt={experience.title} className="h-72 w-full object-cover" />
+          </div>
+          <div className="space-y-4 font-zacchera-body">
         <h2 
           className="text-2xl font-zacchera-bold font-zacchera-heading"
           style={{ color: 'var(--trv-text-tan)' }}
@@ -74,6 +76,7 @@ export default function Details() {
             <Button className="w-full sm:w-auto" variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "catalog" })}>Back</Button>
             <Button className="w-full sm:w-auto" onClick={addToCart}>Add to cart</Button>
           </div>
+        </div>
         </div>
       </div>
     </div>

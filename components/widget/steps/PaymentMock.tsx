@@ -18,7 +18,9 @@ export default function PaymentMock() {
   }
 
   return (
-    <div className="mx-auto max-w-md space-y-4 font-zacchera-body px-3 sm:px-0">
+    <div className="w-full">
+      <div className="mx-auto" style={{ maxWidth: '1170px', width: '100%', paddingLeft: '15px', paddingRight: '15px' }}>
+        <div className="mx-auto max-w-md space-y-4 font-zacchera-body">
       <div className="trv-card p-4">
         <div className="space-y-2">
           <div className="text-sm text-zacchera-text-gray font-zacchera-body">Mock card form</div>
@@ -32,6 +34,7 @@ export default function PaymentMock() {
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-0">
         <Button className="w-full sm:w-auto" variant="ghost" onClick={() => dispatch({ type: "SET_STEP", step: "guest" })}>Back</Button>
         <Button className="w-full sm:w-auto" onClick={complete} disabled={loading}>{loading ? "Processing..." : "Complete Booking"}</Button>
+        </div>
       </div>
     </div>
   );
