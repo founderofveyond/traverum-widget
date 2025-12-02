@@ -119,6 +119,44 @@ export const HOTEL_THEMES: Record<string, HotelTheme> = {
       description: 'Scopri le migliori esperienze sul Lago Maggiore selezionate per te.',
     },
   },
+  'hotel-splendid': {
+    hotelId: 'hotel-splendid',
+    name: 'Hotel Splendid',
+    colors: {
+      primary: '#380100', // Dark brown - main button border color
+      primaryHover: '#380100', // Dark brown - fills on hover
+      secondary: '#d3b298', // Gold/tan - heading color
+      secondaryHover: '#380100',
+      background: '#ffffff',
+      backgroundLight: '#ffffff', // Match page background, no light variant
+      text: '#222222',
+      textGray: '#444444',
+      textDarkGray: '#2d2d2d',
+      textDarkerGray: '#222222',
+      textTan: '#d3b298', // For headings
+      border: '#eeeeee',
+      formBg: '#f6f1ea',
+    },
+    fonts: {
+      body: 'Overpass',
+      heading: 'New York',
+      bodyUrl: 'https://fonts.googleapis.com/css2?family=Overpass:wght@300;700&display=swap',
+    },
+    sizing: {
+      baseFontSize: 17.6,
+      baseLineHeight: 26.4,
+      headingSize: 36,
+      cardTitleSize: 24,
+      cardImageHeight: 250, // Match room card proportions better
+      containerRadius: 0, // No border radius on container to match page
+      cardRadius: 0, // Cards have no border radius on page
+      smallRadius: 0, // Buttons have no border radius
+    },
+    content: {
+      title: 'Local Experiences',
+      description: 'Discover the best experiences around Lake Maggiore, carefully selected for our guests.',
+    },
+  },
   // Example: Add your new hotel here
   // Uncomment and customize this template to add a new hotel widget:
   //

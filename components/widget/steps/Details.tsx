@@ -32,7 +32,12 @@ export default function Details() {
         <img src={experience.imageUrl} alt={experience.title} className="h-72 w-full object-cover" />
       </div>
       <div className="space-y-4 font-zacchera-body">
-        <h2 className="text-2xl font-zacchera-bold font-zacchera-heading">{experience.title}</h2>
+        <h2 
+          className="text-2xl font-zacchera-bold font-zacchera-heading"
+          style={{ color: 'var(--trv-text-tan)' }}
+        >
+          {experience.title}
+        </h2>
         <p className="text-zacchera-text-darker-gray font-zacchera-body">{experience.description}</p>
         <div className="flex gap-4 text-sm text-zacchera-text-gray font-zacchera-body">
           <div>Duration: {Math.round(experience.durationMin / 60)}h</div>

@@ -12,7 +12,12 @@ export default function Confirmation() {
           <path d="M20 6L9 17l-5-5" />
         </svg>
       </div>
-      <h2 className="text-2xl font-zacchera-bold font-zacchera-heading">Booking Confirmed</h2>
+      <h2 
+        className="text-2xl font-zacchera-bold font-zacchera-heading"
+        style={{ color: 'var(--trv-text-tan)' }}
+      >
+        Booking Confirmed
+      </h2>
       <p className="mt-2 text-zacchera-text-gray font-zacchera-body">Your reference: {state.fakeBookingId}</p>
       <div className="mt-6">
         <Button className="w-full sm:w-auto" onClick={() => dispatch({ type: "RESET" })}>Book another experience</Button>

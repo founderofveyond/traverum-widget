@@ -1,12 +1,13 @@
 /* Widget theming helpers */
 .trv-container {
-  background: var(--trv-bg-light);
+  background: var(--trv-bg);
   color: var(--trv-fg);
 }
 
 .trv-card {
-  @apply bg-white shadow border border-zacchera-border-light;
-  border-radius: var(--trv-card-radius, 12px);
+  @apply bg-white border border-zacchera-border-light;
+  border-radius: var(--trv-card-radius, 0px);
+  box-shadow: none;
 }
 
 [data-theme="dark"] .trv-card {

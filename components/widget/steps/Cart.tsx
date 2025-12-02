@@ -25,7 +25,12 @@ export default function Cart() {
                   <div className="flex items-center gap-3">
                     <img src={exp.imageUrl} alt="" className="h-14 w-14 rounded object-cover" />
                     <div>
-                      <div className="font-medium font-zacchera-heading">{exp.title}</div>
+                      <div 
+                        className="font-medium font-zacchera-heading"
+                        style={{ color: 'var(--trv-text-tan)' }}
+                      >
+                        {exp.title}
+                      </div>
                       <div className="text-xs text-zacchera-text-dark-gray font-zacchera-body">
                         {new Date(exp.slots.find(s => s.id === it.slotId)!.startAt).toLocaleString()} · {it.quantity}×
                       </div>
