@@ -42,6 +42,44 @@ export interface HotelTheme {
 }
 
 export const HOTEL_THEMES: Record<string, HotelTheme> = {
+  demo: {
+    hotelId: 'demo',
+    name: 'Traverum Demo',
+    colors: {
+      primary: '#0ea5e9',          // Sky blue primary
+      primaryHover: '#0284c7',     // Darker blue on hover
+      secondary: '#f97316',        // Warm accent
+      secondaryHover: '#ea580c',
+      background: '#ffffff',
+      backgroundLight: '#f8fafc',
+      text: '#111827',
+      textGray: '#6b7280',
+      textDarkGray: '#374151',
+      textDarkerGray: '#111827',
+      textTan: '#f97316',
+      border: '#e5e7eb',
+      formBg: '#f9fafb',
+    },
+    fonts: {
+      body: 'Inter',
+      heading: 'New York',
+      bodyUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
+    },
+    sizing: {
+      baseFontSize: 16,
+      baseLineHeight: 24,
+      headingSize: 34,
+      cardTitleSize: 22,
+      cardImageHeight: 220,
+      containerRadius: 16,
+      cardRadius: 16,
+      smallRadius: 4,
+    },
+    content: {
+      title: 'BRANDED WIDGET FOR YOUR SITE',
+      description: 'Branded widget to sell local experiences and your services. See how it works.',
+    },
+  },
   zacchera: {
     hotelId: 'zacchera',
     name: 'Zacchera Hotels',
