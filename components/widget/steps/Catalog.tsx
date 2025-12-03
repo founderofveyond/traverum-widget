@@ -49,6 +49,7 @@ export default function Catalog() {
               imageUrl={exp.imageUrl}
               description={exp.description}
               priceEuros={`€ ${(exp.priceCents / 100).toFixed(2)}`}
+              hotelId={state.hotelId}
               onView={() => dispatch({ type: "SELECT_EXPERIENCE", experienceId: exp.id })}
             />
           ))}
