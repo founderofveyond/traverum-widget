@@ -54,9 +54,15 @@ export default function ExperienceCard({
       
       {/* Footer Section with Button */}
       <div className="px-4 py-4 border-t border-zacchera-border-light">
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-          <span className="text-lg font-medium font-zacchera-body text-zacchera-text-dark-gray">{priceEuros}</span>
-          <Button className="w-full sm:w-auto" onClick={onView}>View Details</Button>
+        <div className="flex items-center justify-center">
+          <Button
+            className="w-full"
+            onClick={() => {
+              window.open("https://traverum-landing-page.lovable.app/book.demo", "_blank", "noopener,noreferrer");
+            }}
+          >
+            Book a demo
+          </Button>
         </div>
       </div>
     </div>

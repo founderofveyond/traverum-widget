@@ -77,7 +77,7 @@ export const HOTEL_THEMES: Record<string, HotelTheme> = {
     },
     content: {
       title: 'BRANDED WIDGET FOR YOUR SITE',
-      description: 'Branded widget to sell local experiences and your services. See how it works.',
+      description: 'Branded widget to sell local experiences on your site. Book a demo to see how it works.',
     },
   },
   zacchera: {

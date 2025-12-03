@@ -5,11 +5,10 @@ export const LOADING_DELAY = 500;
 export const DEMO_EXPERIENCES: Experience[] = [
   {
     id: "exp_kayak",
-    title: "Sunrise Canadian canoe tour",
+    title: "Island tour",
     imageUrl:
-      "/images/sunrise-canoe-tour.webp",
-    description:
-      "Glide across Lake Maggiore from Angera towards Arona",
+      "/images/borromean-island.jpg",
+    description: "Exclusive 2 hour tour by local guide.",
     priceCents: 6500,
     currency: "EUR",
     durationMin: 120,
@@ -23,9 +22,8 @@ export const DEMO_EXPERIENCES: Experience[] = [
     id: "exp_wine",
     title: "Wine tasting",
     imageUrl:
-      "/images/winetasting.jpg",
-    description:
-      "Discover three carefully crafted mountain wines in the heart of Val d'Ossola",
+      "/images/pexels-helenalopes-696219.jpg",
+    description: "Discover carefully crafted local wines.",
     priceCents: 4500,
     currency: "EUR",
     durationMin: 90,
@@ -37,11 +35,10 @@ export const DEMO_EXPERIENCES: Experience[] = [
   },
   {
     id: "exp_food",
-    title: "Mottarone day",
+    title: "Nature adventure",
     imageUrl:
       "/images/mottarone-day.jpg",
-    description:
-      "Imagine standing on a mountain ridge where seven lakes shimmer at your feet.",
+    description: "Hike to nearby mountain with lunch at the top.",
     priceCents: 5500,
     currency: "EUR",
     durationMin: 150,
