@@ -58,7 +58,7 @@ export default function ExperienceCard({
           <Button
             className="w-full"
             onClick={() => {
-              window.open("https://traverum-landing-page.lovable.app/book.demo", "_blank", "noopener,noreferrer");
+              window.open("https://traverum-landing-page.lovable.app/book-demo", "_blank", "noopener,noreferrer");
             }}
           >
             Book a demo
