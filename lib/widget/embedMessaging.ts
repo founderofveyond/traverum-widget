@@ -24,7 +24,10 @@ export function initAutoResize() {
       
       if (Math.abs(roundedHeight - lastSentHeight) > HEIGHT_THRESHOLD) {
         lastSentHeight = roundedHeight;
+        // Legacy message type used by existing demo pages
         window.parent?.postMessage({ type: "traverum.height", height: roundedHeight }, "*");
+        // New generic message type for host pages that treat widget as a section
+        window.parent?.postMessage({ type: "widget-resize", height: roundedHeight }, "*");
       }
       return;
     }
@@ -40,7 +43,10 @@ export function initAutoResize() {
     // Only send if height changed significantly
     if (Math.abs(roundedHeight - lastSentHeight) > HEIGHT_THRESHOLD) {
       lastSentHeight = roundedHeight;
+      // Legacy message type used by existing demo pages
       window.parent?.postMessage({ type: "traverum.height", height: roundedHeight }, "*");
+      // New generic message type for host pages that treat widget as a section
+      window.parent?.postMessage({ type: "widget-resize", height: roundedHeight }, "*");
     }
   };
 
