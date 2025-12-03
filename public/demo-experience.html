@@ -14,9 +14,27 @@
   <body>
     <div class="container">
       <div class="card" style="margin:16px 0">
-        <iframe src="/widget/demo" sandbox="allow-scripts allow-forms allow-same-origin" style="width:100%;min-height:900px;border:0" referrerpolicy="strict-origin"></iframe>
+        <iframe
+          id="traverum-widget"
+          src="/widget/demo"
+          sandbox="allow-scripts allow-forms allow-same-origin"
+          style="width:100%;min-height:900px;border:0"
+          referrerpolicy="strict-origin"
+        ></iframe>
       </div>
     </div>
+
+    <script>
+      // Auto-resize iframe based on widget content (same behavior as other demos)
+      window.addEventListener('message', function(event) {
+        if (event.data && (event.data.type === 'traverum.height' || event.data.type === 'widget-resize')) {
+          const iframe = document.getElementById('traverum-widget');
+          if (iframe && event.data.height) {
+            iframe.style.height = Math.max(event.data.height + 40, 900) + 'px';
+          }
+        }
+      });
+    </script>
   </body>
 </html>
 
