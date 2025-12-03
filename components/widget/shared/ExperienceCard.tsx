@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import Button from "@/components/widget/shared/Button";
 
 export default function ExperienceCard({
@@ -9,36 +7,14 @@ export default function ExperienceCard({
   imageUrl,
   description,
   priceEuros,
-  hotelId,
   onView
 }: {
   title: string;
   imageUrl: string;
   description: string;
   priceEuros: string;
-  hotelId: string;
   onView: () => void;
 }) {
-  const router = useRouter();
-  const [isFullPage, setIsFullPage] = useState(false);
-
-  useEffect(() => {
-    // Check if we're on the full page route
-    if (typeof window !== "undefined") {
-      setIsFullPage(window.location.pathname.startsWith("/experiences/"));
-    }
-  }, []);
-
-  const handleClick = () => {
-    if (isFullPage) {
-      // On full page: use onView callback to go to details step
-      onView();
-    } else {
-      // On widget: navigate to full page
-      router.push(`/experiences/${hotelId}`);
-    }
-  };
-
   return (
     <div className="bg-white border border-zacchera-border-light w-full max-w-full sm:w-auto sm:max-w-none overflow-hidden">
       {/* Image Section */}
@@ -81,9 +57,11 @@ export default function ExperienceCard({
         <div className="flex items-center justify-center">
           <Button
             className="w-full"
-            onClick={handleClick}
+            onClick={() => {
+              window.open("https://traverum-landing-page.lovable.app/book-demo", "_blank", "noopener,noreferrer");
+            }}
           >
-            {isFullPage ? "View Details" : "Book Experience"}
+            Book a demo
           </Button>
         </div>
       </div>
