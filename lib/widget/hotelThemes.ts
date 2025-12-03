@@ -46,19 +46,19 @@ export const HOTEL_THEMES: Record<string, HotelTheme> = {
     hotelId: 'demo',
     name: 'Traverum Demo',
     colors: {
-      primary: '#0ea5e9',          // Sky blue primary
-      primaryHover: '#0284c7',     // Darker blue on hover
-      secondary: '#f97316',        // Warm accent
-      secondaryHover: '#ea580c',
+      primary: '#380100',
+      primaryHover: '#380100',
+      secondary: '#d3b298',
+      secondaryHover: '#380100',
       background: '#ffffff',
-      backgroundLight: '#f8fafc',
-      text: '#111827',
-      textGray: '#6b7280',
-      textDarkGray: '#374151',
-      textDarkerGray: '#111827',
-      textTan: '#f97316',
-      border: '#e5e7eb',
-      formBg: '#f9fafb',
+      backgroundLight: '#ffffff',
+      text: '#222222',
+      textGray: '#444444',
+      textDarkGray: '#2d2d2d',
+      textDarkerGray: '#222222',
+      textTan: '#d3b298',
+      border: '#eeeeee',
+      formBg: '#f6f1ea',
     },
     fonts: {
       body: 'Inter',

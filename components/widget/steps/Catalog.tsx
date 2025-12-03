@@ -1,11 +1,13 @@
 "use client";
 
 import { useWidget } from "@/lib/widget/widgetState";
+import { getHotelTheme } from "@/lib/widget/hotelThemes";
 import { DEMO_EXPERIENCES } from "@/lib/widget/demoData";
 import ExperienceCard from "@/components/widget/shared/ExperienceCard";
 
 export default function Catalog() {
-  const { dispatch } = useWidget();
+  const { state, dispatch } = useWidget();
+  const theme = getHotelTheme(state.hotelId);
   return (
     <div className="w-full">
       <div className="mx-auto" style={{ maxWidth: '1170px', width: '100%', paddingLeft: '15px', paddingRight: '15px' }}>
@@ -16,13 +18,13 @@ export default function Catalog() {
             style={{ 
               fontSize: '40px',
               letterSpacing: '0.1em',
-              color: '#d3b298',
+              color: 'var(--trv-text-tan)',
               paddingBottom: '20px',
               lineHeight: '1.2',
               margin: '0'
             }}
           >
-            LOCAL EXPERIENCES
+            {theme.content?.title ?? 'LOCAL EXPERIENCES'}
           </h5>
           <p 
             className="text-left font-zacchera-body"
@@ -34,7 +36,7 @@ export default function Catalog() {
               marginBottom: '0'
             }}
           >
-            These are our selected experiences from the area. Start booking by clicking view details.
+            {theme.content?.description ?? 'These are our selected experiences from the area. Start booking by clicking view details.'}
           </p>
         </div>
         
